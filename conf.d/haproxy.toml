@@ -1,0 +1,17 @@
+[template]
+src = "haproxy.cfg.tmpl"
+dest = "/workspace/haproxy.cfg"
+keys = [
+        "/haproxy/frontend-list/",
+        "/haproxy/frontend/",
+       	"/haproxy/peers/",
+        "/haproxy/backend-list/",
+        "/haproxy/backend/",
+        "/haproxy/global/",
+        "/haproxy/defaults/",
+        "/haproxy/listen/",
+        "/haproxy/listen-list/",
+        "/haproxy/user-list/",
+        "/haproxy/userlist/"
+]
+reload_cmd = "echo haproxy restart soon..." 

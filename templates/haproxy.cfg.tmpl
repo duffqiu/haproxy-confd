@@ -1,0 +1,35 @@
+global
+{{range gets "/haproxy/global/*"}}
+    {{.Value}}
+{{end}}   
+
+defaults
+{{range gets "/haproxy/defaults/*"}}
+    {{.Value}}
+{{end}}
+
+peers haproxypeers
+{{range gets "/haproxy/peers/*"}}
+    {{.Value}}
+{{end}}
+
+
+{{range gets "/haproxy/frontend-list/*"}}
+    {{$fname := .Value}}
+    {{$fpath := printf "%s%s%s" "/haproxy/frontend/" $fname "/*"}}
+frontend {{.Value}}
+    {{range gets $fpath}}
+    {{.Value}}
+    {{end}}  
+{{end}}
+
+{{range gets "/haproxy/backend-list/*"}}
+    {{$bname := .Value}}
+    {{$bpath := printf "%s%s%s" "/haproxy/backend/" $bname "/*"}}
+backend {{.Value}}
+    {{range gets $bpath}}
+    {{.Value}}
+    {{end}}
+{{end}}
+
+
