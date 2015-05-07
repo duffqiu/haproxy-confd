@@ -32,4 +32,11 @@ backend {{.Value}}
     {{end}}
 {{end}}
 
-
+{{range gets "/haproxy/user-list/*"}}
+    {{$uname := .Value}}
+    {{$upath := printf "%s%s%s" "/haproxy/userlist/" $uname "/*"}}
+backend {{.Value}}
+    {{range gets $upath}}
+    {{.Value}}
+    {{end}}
+{{end}}
