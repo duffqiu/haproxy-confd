@@ -121,6 +121,27 @@ etcdctl set /haproxy/defaults/default_backend                   "default_backend
 #etcdctl set /haproxy/defaults/http-check_disable-on-404        "http-check disable-on-404"
 #etcdctl set /haproxy/defaults/http-check_expect                "http-check expect [!] <match> <pattern>"
 #etcdctl set /haproxy/defaults/http-check_send-state            "http-check send-state"
+#etcdctl set /haproxy/defaults/http-send-name-header            "http-send-name-header  [<header>]"
+etcdctl set /haproxy/defaults/log_global                        "log global"
+#etcdctl set /haproxy/defaults/no_log                           "no log"
+#can use multiple configuration for log
+#etcdctl set /haproxy/defaults/log_<n>                          "log 127.0.0.1:514 local0 notice notice" 
+etcdctl set /haproxy/defaults/maxconn                           "maxconn 1024" 
+#the possible valueof mode is  tcp|http|health (health is deprecated)
+etcdctl set /haproxy/defaults/mode                              "mode http"
+#etcdctl set /haproxy/defaults/monitor-net                      "monitor-net 192.168.0.252/31"
+etcdctl set /haproxy/defaults/monitor-uri                       "monitor-uri /haproxy_test"
+
+#option xxxx to enable xxx, no option xxxx to disbale xxxx. don't use enable and disable at the same time
+etcdctl set /haproxy/defaults/option_abortonclose               "option abortonclose"
+#etcdctl set /haproxy/defaults/no_option_abortonclose           "no option abortonclose"
+#etcdctl set /haproxy/defaults/option_accept-invalid-http-request "option accept-invalid-http-request"
+#etcdctl set /haproxy/defaults/no_option_accept-invalid-http-request "no option accept-invalid-http-request"
+#etcdctl set /haproxy/defaults/option_accept-invalid-http-response   "option accept-invalid-http-response"
+#etcdctl set /haproxy/defaults/no_option_accept-invalid-http-response   "no option accept-invalid-http-response"
+etcdctl set /haproxy/defaults/option_allbackups                "option allbackups"
+#etcdctl set /haproxy/defaults/no_option_allbackups             "no option allbackups"
+
 
 
 
