@@ -139,8 +139,55 @@ etcdctl set /haproxy/defaults/option_abortonclose               "option abortonc
 #etcdctl set /haproxy/defaults/no_option_accept-invalid-http-request "no option accept-invalid-http-request"
 #etcdctl set /haproxy/defaults/option_accept-invalid-http-response   "option accept-invalid-http-response"
 #etcdctl set /haproxy/defaults/no_option_accept-invalid-http-response   "no option accept-invalid-http-response"
-etcdctl set /haproxy/defaults/option_allbackups                "option allbackups"
+etcdctl set /haproxy/defaults/option_allbackups                 "option allbackups"
 #etcdctl set /haproxy/defaults/no_option_allbackups             "no option allbackups"
+etcdctl set /haproxy/defaults/option_checkcache                 "option checkcache"
+#etcdctl set /haproxy/defaults/no_option_checkcache             "no option checkcache"
+etcdctl set /haproxy/defaults/option_clitcpka                   "option clitcpka"
+#etcdctl set /haproxy/defaults/no_option_clitcpka               "no option clitcpka"
+#there is no "no option for option_contstats"
+#etcdctl set /haproxy/defaults/option_contstats                 "option contstats"
+#turn on this in production
+#etcdctl set /haproxy/defaults/option_dontlog-normal            "option dontlog-normal"
+etcdctl set /haproxy/defaults/no_option_dontlog-normal          "no option dontlog-normal"
+#etcdctl set /haproxy/defaults/option_dontlognull               "option dontlognull"
+#etcdctl set /haproxy/defaults/no_option_dontlognull            "no option dontlognull"
+
+# This option implicitly enables the "httpclose" option
+#etcdctl set /haproxy/defaults/option_forceclose                "option forceclose"
+#etcdctl set /haproxy/defaults/no_option_forceclose             "no option forceclose"
+
+#option forwardfor [ except <network> ] [ header <name> ] [ if-none ]
+#etcdctl set /haproxy/defaults/option_forwardfor                "option forwardfor"
+
+#etcdctl set /haproxy/defaults/option_http-no-delay             "option http-no-delay"
+#etcdctl set /haproxy/defaults/no_option_http-no-delay          "no option http-no-delay"
+
+#not to use it
+#etcdctl set /haproxy/defaults/option_http-pretend-keepalive    "option http-pretend-keepalive"
+#etcdctl set /haproxy/defaults/no_option_http-pretend-keepalive "no option http-pretend-keepalive"
+
+#etcdctl set /haproxy/defaults/option_http-server-close         "option http-server-close"
+#etcdctl set /haproxy/defaults/no_option_http-server-close      "no option http-server-close"
+#etcdctl set /haproxy/defaults/option_http-use-proxy-header     "option http-use-proxy-header"
+#etcdctl set /haproxy/defaults/no_option http-use-proxy-header  "no option http-use-proxy-header"
+
+#only check tcp connect as default
+#option httpchk
+#option httpchk <uri>
+#option httpchk <method> <uri>
+#option httpchk <method> <uri> <version>
+etcdctl set /haproxy/defaults/option_httpchk                    "option httpchk"
+
+#etcdctl set /haproxy/defaults/option_httpclose                 "option httpclose"
+#etcdctl set /haproxy/defaults/no_option_httpclose              "no option httpclose"
+#etcdctl set /haproxy/defaults/option_httplog                   "option httplog [clf]"
+#etcdctl set /haproxy/defaults/option_http_proxy                "option http_proxy"
+#etcdctl set /haproxy/defaults/no_option_http_proxy             "no option http_proxy"
+#etcdctl set /haproxy/defaults/
+#etcdctl set /haproxy/defaults/
+
+
 
 
 
